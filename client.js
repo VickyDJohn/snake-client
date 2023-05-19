@@ -10,7 +10,7 @@ exports.connect = (name) => {
 
   conn.setEncoding('utf8');
 
-  //use console.log to display messages and conn.write to send messages, controls to the server
+  //use console.log to display messages in terminal and conn.write to send messages, controls to the server
   const connected = conn.on("connect", () => {
     console.log("Connected!");
     conn.write(`Name: ${name}`);
