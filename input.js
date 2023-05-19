@@ -10,6 +10,7 @@ exports.setupInput = (conn) => {
   return stdin;
 };
 
+//use conditional to check if input matches object element and output if true
 const handleUserInput = (key) => {
   if (key in msgMappings) {
     const message = msgMappings[key];
