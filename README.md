@@ -25,7 +25,7 @@ To run the Snake Client, you need to have the Snake Server running. Follow the s
 
 1. Start the Snake Server by following the instructions in the [Snake Server repository](https://github.com/lighthouse-labs/snek-multiplayer.git).
 2. Open a terminal and navigate to the project directory.
-3. Run the Snake Client using the following command:
+3. Run the Snake Client using the following command (make sure to change XYZ to any 3 letter name you desire):
 
    ```bash
    node play.js "XYZ"
