@@ -22,11 +22,13 @@ Before you can run this client, you will need to be running the server side whic
 
 ### Usage
 
-1. Run the development snake client using the following command (Replace "XYZ" with your choice of a name consisting of 3 alphabets):
+1. Clone this repository to your local machine.
+2. Open up a terminal window and navigate to the repository's root directory.
+3. Run the development snake client using the following command (Replace "XYZ" with your choice of a name consisting of 3 alphabets):
    ```bash
    node play.js "XYZ"
-2. Make sure the snake server is running by following the instructions in the [Snek Server](https://github.com/lighthouse-labs/snek-multiplayer) repository.
-3. Play the snake game in the terminal and enjoy!
+4. Make sure the snake server is running by following the instructions in the [Snek Server](https://github.com/lighthouse-labs/snek-multiplayer) repository.
+5. Play the snake game in the terminal and enjoy!
 
 
 ## How to Play
