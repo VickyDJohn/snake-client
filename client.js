@@ -2,7 +2,7 @@ const net = require('net');
 
 exports.connect = () => {
   const conn = net.createConnection({
-    host: '172.23.86.137',
+    host: '172.17.167.177',
     port: 50541,
   });
 
@@ -10,6 +10,7 @@ exports.connect = () => {
 
   const connected = conn.on("connect", () => {
     console.log("Connected!");
+    console.log("Name: VDJ");
   });
 
   const endMsg = conn.on("data", (message) => {
