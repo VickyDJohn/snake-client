@@ -12,19 +12,32 @@ Snake Client is a multiplayer version of the classic snake game. It is a video g
 
 ## Getting Started
 
-To run the Snake Client, you need to have the Snake Server running. Follow the steps below to set up and start playing:
+Before you can run this client, you will need to be running the server side which you can download and install from the [Snek Server](https://github.com/lighthouse-labs/snek-multiplayer) repository.
 
-### Prerequisites
+## Dependencies
 
-- Node.js installed on your machine
-- Snake Server installed and running
+- Node.js
+- net module (built-in)
 
 
 ### Usage
 
-1. Start the Snake Server by following the instructions in the [Snake Server repository](https://github.com/lighthouse-labs/snek-multiplayer.git).
-2. Open a terminal and navigate to the project directory.
-3. Run the Snake Client using the following command (make sure to change XYZ to any 3 letter name you desire):
-
+1. Run the development snake client using the following command:
    ```bash
    node play.js "XYZ"
+    Replace "XYZ" with your choice of a name consisting of 3 alphabets.
+2. Make sure the snake server is running by following the instructions in the [Snek Server](https://github.com/lighthouse-labs/snek-multiplayer) repository.
+3. Play the snake game in the terminal and enjoy!
+
+
+## How to Play
+
+- Use the "WASD" keys to control the movement of the snake.
+- The goal is to eat the food dots to grow the snake without hitting the walls or the snake's own body.
+- As the snake grows, it becomes more challenging to navigate.
+- The game ends when the snake collides with a wall or itself.
+- Use the special keys "1", "2", "3", "4" to send pre-defined messages to other players.
+
+## Credits
+
+This project is developed by [Vicky John](https://github.com/VickyDJohn).
