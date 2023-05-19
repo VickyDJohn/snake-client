@@ -7,7 +7,6 @@ Snake Client is a multiplayer version of the classic snake game. It is a video g
 ## Features
 
 - Multiplayer functionality
-- Real-time updates
 - Customizable player name
 - Simple terminal-based interface
 
