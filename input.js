@@ -8,7 +8,7 @@ exports.setupInput = (conn) => {
   return stdin;
 };
 
-//similar to using conn.write in 'client.js', use connection.write here to pass keyboard input
+//similar to using connection.write in 'client.js', use connection.write here to pass keyboard input
 const handleUserInput = (key) => {
   if (key === 'w' || key === 'W') {
       connection.write("Move: up");

@@ -14,17 +14,17 @@ exports.connect = () => {
     console.log("Connected!");
     conn.write("Name: VDJ");
     // setTimeout(() => {
-    // //   conn.write("Move: up");
-    // // }, 1000);
-    // // setTimeout(() => {
-    // //   conn.write("Move: left");
-    // // }, 2000);
-    // // setTimeout(() => {
-    // //   conn.write("Move: down");
-    // // }, 3000);
-    // // setTimeout(() => {
-    // //   conn.write("Move: right");
-    // // }, 4000);
+    //   conn.write("Move: up");
+    // }, 1000);
+    // setTimeout(() => {
+    //   conn.write("Move: left");
+    // }, 2000);
+    // setTimeout(() => {
+    //   conn.write("Move: down");
+    // }, 3000);
+    // setTimeout(() => {
+    //   conn.write("Move: right");
+    // }, 4000);
   });
 
   const endMsg = conn.on("data", (message) => {
