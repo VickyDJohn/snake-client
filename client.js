@@ -10,7 +10,13 @@ exports.connect = () => {
 
   const connected = conn.on("connect", () => {
     console.log("Connected!");
-    console.log("Name: VDJ");
+    conn.write("Name: VDJ");
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 2000);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 1000);
   });
 
   const endMsg = conn.on("data", (message) => {
