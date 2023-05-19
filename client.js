@@ -1,10 +1,11 @@
 const net = require('net');
+const { IP, PORT, } = require('./constants');
 
-//using shorthand 'exports', connect to the server
-exports.connect = () => {
+//using shorthand 'exports', connect to the server, name paramter allows us to input a name in the command line
+exports.connect = (name) => {
   const conn = net.createConnection({
-    host: '172.17.167.177',
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
 
   conn.setEncoding('utf8');
@@ -12,7 +13,7 @@ exports.connect = () => {
   //use console.log to display messages and conn.write to send messages, controls to the server
   const connected = conn.on("connect", () => {
     console.log("Connected!");
-    conn.write("Name: VDJ");
+    conn.write(`Name: ${name}`);
     // setTimeout(() => {
     //   conn.write("Move: up");
     // }, 1000);
