@@ -8,25 +8,23 @@ exports.setupInput = (conn) => {
   return stdin;
 };
 
-//similar to using connection.write in 'client.js', use connection.write here to pass keyboard input
+//use object to define and store messages that need to be sent to the server
+const msgMappings = {
+  w: "Move: up",
+  a: "Move: left",
+  s: "Move: down",
+  d: "Move: right",
+  '1': "Say: Too slow, slowpoke!",
+  '2': "Say: That was unfortunate :/",
+  '3': "Say: Well, well, well. Look who it is.",
+  '4': "Say: PogChamp!",
+};
+
 const handleUserInput = (key) => {
-  if (key === 'w' || key === 'W') {
-      connection.write("Move: up");
-  } else if (key === 'a' || key === 'A') {
-      connection.write("Move: left");
-  } else if (key === 's' || key === 'S') {
-      connection.write("Move: down");
-  } else if (key === 'd' || key === 'D') {
-      connection.write("Move: right");
-  } else if (key === '1') {
-    connection.write("Say: Too slow, slowpoke!");
-  } else if (key === '2') {
-    connection.write("Say: That was unfortunate :/");
-  } else if (key === '3') {
-    connection.write("Say: Well, well, well. Look who it is.");
-  } else if (key === '4') {
-    connection.write("Say: PogChamp!");
-  }else if (key === '\u0003') {
+  if (key in msgMappings) {
+      const message = msgMappings[key];
+      connection.write(message);
+  } else if (key === '\u0003') {
     console.log("Exiting...");
     process.exit();
   }
